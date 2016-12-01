@@ -81,6 +81,8 @@ $(function () {
             }
         });
 
+        $.load('data.json', function(data) { console.log(data) } );
+
         $.getJSON('data.json')
             .done(function(data) {
                 $('#conteneur').append('<p>' + data[hindId] + '</p>');
