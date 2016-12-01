@@ -12,6 +12,7 @@
 				width: 70%;
 				height: 1000px;
 				background-color: #EFECCA;
+				padding-top: 10px;
 			}
 
 			#droite {
@@ -23,6 +24,14 @@
 
 			span, button, input {
 				margin: 10px;
+			}
+
+			button:enabled:hover {
+				-moz-box-shadow: 3px 3px 10px 0px #656565;
+				-webkit-box-shadow: 3px 3px 10px 0px #656565;
+				-o-box-shadow: 3px 3px 10px 0px #656565;
+				box-shadow: 3px 3px 10px 0px #656565;
+				filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=10);
 			}
 		</style>
 		<script src="jquery.js"></script>
@@ -38,59 +47,7 @@
 			<hr>
 		</div>
 
-		<script>
-			$(function () {
-				$('#btn1').click(function () {
-					$("#droite button").prop("disabled", true);
-
-					$('hr').after('<div id="conteneur">Texte du label <input type="text" id="tex"><button id="btnok">OK</button></div>');
-
-					$('#conteneur').hide().fadeIn();
-
-					$('#btnok').click(function () {
-						var lid = '<span>' + $('#tex').val() + '</span>';
-						$('#gauche').append(lid);
-						removeConteneur();
-					});
-				});
-				$('#btn2').click(function () {
-					$("#droite button").prop("disabled", true);
-
-					$('hr').after('<div id="conteneur">id de la zone de texte <input type="text" id="tex"><button id="btnok">OK</button></div>');
-
-					$('#conteneur').hide().fadeIn();
-
-					$('#btnok').click(function () {
-						var lid = '<input type="text" id="' + $('#tex').val() + '"><br>';
-						$('#gauche').append(lid);
-						removeConteneur();
-					});
-				});
-				$('#btn3').click(function () {
-					$("#droite button").prop("disabled", true);
-
-					$('hr').after('<div id="conteneur">Texte du bouton <input type="text" id="tex"><button id="btnok">OK</button></div>');
-
-					$('#conteneur').hide().fadeIn();
-
-					$('#btnok').click(function () {
-						var lid = '<button>' + $('#tex').val() + '</button>';
-						$('#gauche').append(lid);
-						removeConteneur();
-					});
-				});
-
-				function removeConteneur()
-				{
-					// On réactive les boutons
-					$("#droite button").prop("disabled", false);
-
-					// Puis fadeOut
-					$('#conteneur').fadeOut(function() {
-						$('#conteneur').remove();
-					});
-				}
-			});
-		</script>
+		<script src="jquery.js"></script>
+		<script src="script.js"></script>
 	</body>
 </html>
