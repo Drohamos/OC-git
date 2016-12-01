@@ -1,4 +1,7 @@
 $(function () {
+    // Fix bug Firefox
+    $("#droite button").prop("disabled", false);
+
     $('#btn1').click(function () {
         $("#droite button").prop("disabled", true);
 
@@ -78,10 +81,13 @@ $(function () {
             }
         });
 
-        $.getJSON('data.json', function(data) {
-            console.log(data[hindId]);
-
-            $('#conteneur').append(data[hindId]);
-        });
+        $.getJSON('data.json')
+            .done(function(data) {
+                $('#conteneur').append('<p>' + data[hindId] + '</p>');
+            })
+            .fail(function() {
+                $('#conteneur').append('<p>Impossible de récupérer les données, essayez sur Firefox.</p>');
+            })
+        ;
     }
 });
