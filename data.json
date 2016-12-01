@@ -1,0 +1,5 @@
+{
+    "label":"Utilisez la zone de texte pour définir le texte à insérer dans le label, puis cliquez sur <strong>OK</strong> pour l'afficher dans la partie gauche de la page ou sur <strong>Annuler</strong> pour annuler l'insertion du label.",
+    "zoneTexte":"Utilisez la zone de texte pour définir l'id de la zone de texte à insérer, puis cliquez sur <strong>OK</strong> pour l'afficher dans la partie gauche de la page ou sur <strong>Annuler</strong> pour annuler l'insertion du la zone de texte",
+    "bouton":"Utilisez la zone de texte pour définir le texte à insérer dans le bouton, puis cliquez sur <strong>OK</strong> pour l'afficher dans la partie gauche de la page ou sur <strong>Annuler</strong> pour annuler l'insertion du bouton."
+}
