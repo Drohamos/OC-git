@@ -81,6 +81,7 @@ $(function () {
             }
         });
 
+        // Équivalent de load(), mais permet de récupérer directement des données JSON
         $.getJSON('data.json')
             .done(function(data) {
                 $('#conteneur').append('<p>' + data[hindId] + '</p>');
