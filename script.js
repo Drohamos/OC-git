@@ -18,7 +18,7 @@ $(function () {
     $('#btn2').click(function () {
         $("#droite button").prop("disabled", true);
 
-        ajoutBouton('id zone de texte', 'zoneTexte');
+        ajoutBouton('Id zone de texte', 'zoneTexte');
 
         $('#conteneur').hide().fadeIn();
 
@@ -80,8 +80,6 @@ $(function () {
                 }
             }
         });
-
-        $.load('data.json', function(data) { console.log(data) } );
 
         $.getJSON('data.json')
             .done(function(data) {
